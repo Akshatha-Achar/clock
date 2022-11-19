@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #00bdaa; */
+  background-color: #97bfb4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: #ffffff;
+}
+header {
+  min-width: 30rem;
+  /* background-color: #a2416b; */
+  text-align: center;
+  margin: 0 0 3% 0;
+}
+
+.heading {
+  background: rgba(55, 61, 22, 0.57);
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1%;
+}
+.container {
+  min-width: 30rem;
+  min-height: 30rem;
+  background: #a2416b;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #faeecf;
+  border: 1rem solid #d65454;
+}
+.numbers {
+  position: absolute;
+  font-size: 2rem;
+  color: #000000;
+}
+.num-12 {
+  top: 0;
+  left: 45%;
+}
+.num-9 {
+  top: 45%;
+  left: 1%;
+}
+.num-6 {
+  top: 90%;
+  left: 47%;
+}
+.num-3 {
+  left: 95%;
+  top: 45%;
+}
+.mid-numbers {
+  position: absolute;
+  color: #000;
+  font-size: 1.5rem;
+}
+.num-1 {
+  top: 8%;
+  left: 73%;
+}
+.num-2 {
+  top: 25%;
+  left: 89%;
+}
+.num-4 {
+  top: 69%;
+  left: 89%;
+}
+.num-5 {
+  top: 86%;
+  left: 72%;
+}
+.num-7 {
+  top: 86%;
+  left: 25%;
+}
+.num-8 {
+  top: 69%;
+  left: 8%;
+}
+.num-10 {
+  top: 25%;
+  left: 7%;
+}
+.num-11 {
+  top: 8%;
+  left: 22%;
+}
+/* .align {
+  position: relative;
+  left: 8%;
+  top: 8%;
+  width: 84%;
+  height: 84%;
+  border-radius: 50%;
+  border: 1px solid red;
+} */
