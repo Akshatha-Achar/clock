@@ -5,37 +5,33 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #b2e0d4cb;
+  background-color: #efdb98;
   color: #ffffff;
+  font-family: "Inter";
+  font-size: clamp(0.5rem, 0.5rem + 1vw, 1rem);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
 }
 header {
-  min-width: 30rem;
   text-align: center;
-  margin: 0 0 3% 0;
+  margin: 0 0 2rem 0;
 }
 
 .heading {
-  background: rgba(49, 100, 21, 0.888);
+  padding: clamp(0.5rem, 0.5rem + 1vw, 1rem);
+  background: #a81b58;
   border-radius: 1rem;
+  box-shadow: 5px 4px 5px #1f030fcf, 5px 5px 3px #de74a2 inset;
   color: #fff;
-  box-shadow: 5px 4px 5px #1f030fcf, 5px 5px 3px rgb(113, 179, 74) inset;
-  padding: 1%;
 }
 .container {
   min-width: 30rem;
   min-height: 30rem;
-  background: #a81b58;
-  box-shadow: 8px 6px 8px #1f030fcf, 8px 8px 6px #ee5798ef inset;
+  background: #688455;
+  box-shadow: 8px 6px 8px #1f030fcf;
   border-radius: 10%;
 
   display: flex;
@@ -43,19 +39,20 @@ header {
   justify-content: center;
   align-items: center;
 }
-.circle {
+.clock {
   position: relative;
   width: 80%;
   height: 80%;
   border-radius: 50%;
   background: #fceec4;
-  border: 1rem solid #d65454;
+  border: 1rem solid #a51654;
   box-shadow: 6px 6px 5px #686865 inset, 7px 7px 7px rgba(11, 37, 41, 0.69);
 }
 .big-numbers {
   position: absolute;
-  font-size: 2rem;
   color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .num-12 {
   top: 0;
@@ -66,12 +63,12 @@ header {
   left: 1%;
 }
 .num-6 {
-  top: 90%;
+  top: 91%;
   left: 49%;
 }
 .num-3 {
-  left: 95%;
   top: 45%;
+  left: 95%;
 }
 .small-numbers {
   position: absolute;
@@ -110,16 +107,6 @@ header {
   top: 7%;
   left: 25%;
 }
-/* .align {
-  position: relative;
-  left: 8%;
-  top: 8%;
-  width: 84%;
-  height: 84%;
-  border-radius: 50%;
-  border: 1px solid red;
-} */
-
 .hand {
   position: absolute;
   bottom: 50%;
@@ -157,16 +144,15 @@ header {
 .display-date {
   position: absolute;
   padding: 2.2%;
-  font-weight: 800;
   background-color: #fbfbfa;
-  /* border: 1px solid #dad7c8; */
-  color: rgb(43, 5, 5);
-  transform: translate(-50%, -50%);
   border-radius: 1rem;
+  box-shadow: 3px 3px 1px #797978 inset;
+  color: rgb(43, 5, 5);
+  font-weight: 800;
+  transform: translate(-50%, -50%);
   top: 30%;
   left: 50%;
   z-index: 0;
-  box-shadow: 3px 3px 1px #797978 inset;
 }
 .second {
   width: 1%;
@@ -184,5 +170,39 @@ header {
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .container {
+    min-width: 24rem;
+    min-height: 24rem;
+  }
+  .clock {
+    border: 0.7rem solid #a51654;
+    box-shadow: 5px 5px 4px #686865 inset, 6px 6px 6px rgba(11, 37, 41, 0.69);
+  }
+  .big-numbers {
+    font-size: 1.5rem;
+  }
+  .small-numbers {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .container {
+    min-width: 18rem;
+    min-height: 18rem;
+  }
+  .clock {
+    border: 0.5rem solid #a51654;
+    box-shadow: 4px 4px 3px #686865 inset, 5px 5px 5px rgba(11, 37, 41, 0.69);
+  }
+  .big-numbers {
+    font-size: 1.3rem;
+  }
+  .small-numbers {
+    font-size: 1rem;
   }
 }
