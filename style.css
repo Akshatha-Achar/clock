@@ -1,3 +1,8 @@
+:root {
+  --hands-color: #130d0d;
+  --inner-background: #fff;
+  --number-color: #1d1d1d;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +10,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #e1dfae;
+  background-color: #1c1c1c;
   color: #ffffff;
   font-family: "Inter";
   font-size: clamp(0.5rem, 0.5rem + 1vw, 1rem);
@@ -22,16 +27,17 @@ header {
 
 .heading {
   padding: clamp(0.5rem, 0.5rem + 1vw, 1rem);
-  background: #a81b58;
+  background-color: #a52323;
   border-radius: 1rem;
-  box-shadow: 5px 4px 5px #1f030fcf, 5px 5px 3px #de74a2 inset;
+  box-shadow: 5px 4px 5px #1f030fcf, 5px 5px 3px rgb(205, 72, 72) inset;
   color: #fff;
 }
 .container {
   min-width: 30rem;
   min-height: 30rem;
-  background: #4b795c;
-  box-shadow: 8px 6px 8px #1f030fcf;
+  background-color: #605b5bbb;
+  box-shadow: 8px 6px 8px rgb(208, 207, 207) inset,
+    7px 7px 7px rgba(11, 37, 41, 0.69);
   border-radius: 10%;
 
   display: flex;
@@ -44,13 +50,15 @@ header {
   width: 80%;
   height: 80%;
   border-radius: 50%;
-  background: #fceec4;
-  border: 1rem solid #a51654;
+  /* background: #fceec4; */
+  background: var(--inner-background);
+
+  border: 1rem solid var(--hands-color);
   box-shadow: 6px 6px 5px #686865 inset, 7px 7px 7px rgba(11, 37, 41, 0.69);
+  color: var(--number-color);
 }
 .big-numbers {
   position: absolute;
-  color: #000000;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -72,7 +80,6 @@ header {
 }
 .small-numbers {
   position: absolute;
-  color: #000;
   font-size: 1.5rem;
 }
 .num-1 {
@@ -118,7 +125,7 @@ header {
   width: 2.2%;
   height: 27%;
   border-radius: 50% 50% 0 0;
-  background: #0e215e;
+  background: black;
   transform: rotateZ(0deg);
   z-index: 1;
 }
@@ -126,7 +133,7 @@ header {
   height: 40%;
   width: 1.7%;
   border-radius: 50% 50% 0 0;
-  background-color: #0e215e;
+  background: black;
   transform: rotateZ(0deg);
   z-index: 2;
 }
@@ -134,7 +141,7 @@ header {
   width: 6%;
   height: 6%;
   border-radius: 50%;
-  background-color: #a51654;
+  background-color: var(--hands-color);
   position: absolute;
   top: 50%;
   left: 51%;
@@ -144,7 +151,7 @@ header {
 .display-date {
   position: absolute;
   padding: 2.2%;
-  background-color: #fbfbfa;
+  background-color: #f5f5de;
   border-radius: 1rem;
   box-shadow: 3px 3px 1px #797978 inset;
   color: rgb(43, 5, 5);
@@ -179,7 +186,7 @@ header {
     min-height: 24rem;
   }
   .clock {
-    border: 0.7rem solid #a51654;
+    border: 0.7rem solid var(--hands-color);
     box-shadow: 5px 5px 4px #686865 inset, 6px 6px 6px rgba(11, 37, 41, 0.69);
   }
   .big-numbers {
@@ -196,7 +203,7 @@ header {
     min-height: 18rem;
   }
   .clock {
-    border: 0.5rem solid #a51654;
+    border: 0.5rem solid var(--hands-color);
     box-shadow: 4px 4px 3px #686865 inset, 5px 5px 5px rgba(11, 37, 41, 0.69);
   }
   .big-numbers {

@@ -9,7 +9,6 @@ const secondHand = document.querySelector(".second");
 const date = document.querySelector(".display-date");
 
 let now = new Date();
-
 let hour = now.getHours() % 12 || 12;
 let minute = now.getMinutes();
 let second = now.getSeconds();
@@ -19,9 +18,19 @@ date.textContent = now.toDateString();
 hourHand.style.transform = `rotateZ(${hour * 30}deg)`;
 minuteHand.style.transform = `rotateZ(${minute * 6}deg)`;
 
-if ((1 <= hour <= 4 && meridiem === "AM") || (hour >= 6 && meridiem === "PM")) {
-  body.style.backgroundColor = "#2B2B2B";
-  container.style.backgroundColor = "#497174";
+const changeBackground = () => {
+  body.style.backgroundColor = "grey";
+  container.style.backgroundColor = "#1c1c1c";
+  clock.style.backgroundColor = "#b9b09f";
+};
+if (hour >= 6 && hour !== 12) {
+  if (meridiem === "PM") {
+    changeBackground();
+  }
+} else {
+  if (meridiem == "AM") {
+    changeBackground();
+  }
 }
 
 setInterval(() => {
